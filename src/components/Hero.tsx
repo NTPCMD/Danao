@@ -72,9 +72,9 @@ export function Hero({ scrollY }: { scrollY: number }) {
           className="mb-8 flex justify-center"
         >
           <img 
-            src="/danao-logo.svg" 
+            src="/D copy 3 2.jpeg" 
             alt="Danao Group Logo" 
-            className="w-32 h-32 md:w-40 md:h-40 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+            className="w-32 h-32 md:w-40 md:h-40 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] object-contain"
           />
         </motion.div>
         <motion.p
