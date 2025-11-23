@@ -13,8 +13,9 @@ import {
   UtensilsCrossed,
   ChevronDown,
   Sparkles,
-  SparklesIcon,
   Bot,
+  FileText,
+  Calculator,
 } from 'lucide-react';
 import { ContactCTA } from '../components/ContactCTA';
 import { Footer } from '../components/Footer';
@@ -96,7 +97,7 @@ const services = [
     id: 'danao-administration',
     title: 'Danao Administration',
     description: 'Administrative and operational support for your business.',
-    icon: BadgeCheck,
+    icon: FileText,
     businesses: [
       'Virtual Assistant Services',
       'Data Entry & Management',
@@ -110,7 +111,7 @@ const services = [
     id: 'danao-accounting',
     title: 'Danao Accounting',
     description: 'Professional bookkeeping and accounting coordination.',
-    icon: BadgeCheck,
+    icon: Calculator,
     businesses: [
       'Bookkeeping Services',
       'Financial Reporting',
