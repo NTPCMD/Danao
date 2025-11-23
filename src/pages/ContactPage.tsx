@@ -19,22 +19,22 @@ export function ContactPage() {
     {
       icon: MapPin,
       title: 'Location',
-      details: ['Australia-wide operations', 'Main office: Sydney, NSW'],
+      details: ['Perth, Western Australia', 'Servicing Perth Metro'],
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['1300 000 000', 'Available 24/7'],
+      details: ['1800 676 767', 'Mon-Fri 6am-7pm'],
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@danaogroup.com', 'Response within 24 hours'],
+      details: ['info@danaogroup.com', 'Response in 6-7 hours'],
     },
     {
       icon: Clock,
       title: 'Operating Hours',
-      details: ['Business Hours: Mon-Fri 9am-6pm', 'Australia Wide Coverage'],
+      details: ['Mon-Fri: 6am-7pm', 'Weekend: By Appointment'],
     },
   ];
 
@@ -115,13 +115,13 @@ export function ContactPage() {
               About Danao Group
             </h3>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Danao Group is Australia's premier multi-industry service provider, delivering excellence across technology,
+              Danao Group is Perth's premier multi-industry service provider, delivering excellence across technology,
               logistics, property management, hospitality, events, and more. With our commitment to the Gold Standard, we
               ensure every client receives exceptional, tailored service.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Our network of trusted partners and dedicated professionals work around the clock to meet your needs with
-              precision, reliability, and care.
+              Our network of trusted partners and dedicated professionals work to meet your needs with
+              precision, reliability, and care throughout Perth and Western Australia.
             </p>
           </motion.div>
         </div>

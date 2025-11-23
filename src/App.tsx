@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation';
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ConciergePage } from './pages/ConciergePage';
+import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/concierge" element={<ConciergePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

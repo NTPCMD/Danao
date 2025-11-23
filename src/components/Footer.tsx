@@ -85,8 +85,8 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:1300000000" className="hover:text-[#D4AF37] transition-colors duration-300">
-                  1300 000 000
+                <a href="tel:1800676767" className="hover:text-[#D4AF37] transition-colors duration-300">
+                  1800 676 767
                 </a>
               </li>
               <li>
@@ -98,7 +98,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <p>Australia Wide</p>
+                <p>Perth, Western Australia</p>
               </li>
             </ul>
           </motion.div>

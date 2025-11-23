@@ -7,7 +7,7 @@ export function Navigation() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
-    { path: '/concierge', label: 'Concierge' },
+    { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];
 
