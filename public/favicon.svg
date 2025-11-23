@@ -1,5 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="12" fill="#0A0A0A"/>
-  <path d="M18 16h14c9 0 16 7 16 16s-7 16-16 16H18V16Z" stroke="#C9A961" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M26 24h6c4.418 0 8 3.582 8 8s-3.582 8-8 8h-6V24Z" fill="#C9A961"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Danao Group Icon</title>
+  <desc id="desc">Gold monogram icon on black background.</desc>
+  <rect width="64" height="64" fill="#050505" rx="8" />
+  <g fill="#C9B176">
+    <rect x="36" y="9" width="12" height="12" />
+    <path d="M12 8h9c11.5 0 21 8 21 18s-9.5 18-21 18h-9V8Zm8 8v22h4.5C32 38 36 34.5 36 29s-4-9-11.5-9H20Z" />
+  </g>
 </svg>

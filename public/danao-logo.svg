@@ -1,32 +1,17 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Outer circle with gold border -->
-  <circle cx="100" cy="100" r="95" stroke="#D4AF37" stroke-width="3" fill="#000000"/>
-  
-  <!-- Inner decorative circle -->
-  <circle cx="100" cy="100" r="80" stroke="#D4AF37" stroke-width="1" opacity="0.3" fill="none"/>
-  
-  <!-- DG Letters - Elegant and Bold -->
-  <text x="100" y="120" font-family="'Playfair Display', serif" font-size="72" font-weight="700" fill="#D4AF37" text-anchor="middle">DG</text>
-  
-  <!-- Top arc text -->
-  <path id="topArc" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
-  <text font-family="'Inter', sans-serif" font-size="11" font-weight="500" letter-spacing="3" fill="#D4AF37">
-    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
-      THE DANAO GOLD STANDARD
-    </textPath>
-  </text>
-  
-  <!-- Bottom arc text -->
-  <path id="bottomArc" d="M 30,100 A 70,70 0 0,0 170,100" fill="none"/>
-  <text font-family="'Inter', sans-serif" font-size="14" font-weight="600" letter-spacing="2" fill="#FFFFFF">
-    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
-      DANAO GROUP
-    </textPath>
-  </text>
-  
-  <!-- Decorative corner elements -->
-  <path d="M 20,30 L 20,20 L 30,20" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.5"/>
-  <path d="M 170,20 L 180,20 L 180,30" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.5"/>
-  <path d="M 180,170 L 180,180 L 170,180" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.5"/>
-  <path d="M 30,180 L 20,180 L 20,170" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.5"/>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Danao Group Logo</title>
+  <desc id="desc">Gold monogram icon and wordmark for Danao Group with tagline the gold standard.</desc>
+  <rect width="1080" height="1080" fill="#050505" />
+
+  <g fill="#C9B176">
+    <rect x="614" y="220" width="130" height="130" />
+    <path d="M360 250h150c135 0 245 93 245 220s-110 220-245 220H360V250Zm110 90v260h52c81 0 144-57 144-130s-63-130-144-130h-52Z" />
+  </g>
+
+  <g fill="#C9B176" text-anchor="middle" font-family="'Trajan Pro', 'Cinzel', 'Playfair Display', serif">
+    <text x="540" y="640" font-size="96" letter-spacing="8">DANAO GROUP</text>
+    <line x1="250" x2="830" y1="670" y2="670" stroke="#C9B176" stroke-width="4" stroke-linecap="square" />
+    <text x="540" y="728" font-size="30" letter-spacing="6">THE GOLD STANDARD</text>
+    <line x1="250" x2="830" y1="758" y2="758" stroke="#C9B176" stroke-width="4" stroke-linecap="square" />
+  </g>
 </svg>
