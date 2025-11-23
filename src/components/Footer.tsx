@@ -37,16 +37,12 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            <div className="flex items-center gap-3">
-              <div className="h-11 w-11 rounded-full border border-[#D4AF37] flex items-center justify-center bg-black shadow-[0_0_20px_rgba(212,175,55,0.25)]">
-                <span className="text-lg font-semibold" style={{ fontFamily: 'Playfair Display, serif' }}>
-                  DG
-                </span>
-              </div>
-              <div className="leading-tight">
-                <span className="block text-sm text-gray-300">The Danao Gold Standard</span>
-                <span className="block text-xl font-semibold">Danao Group</span>
-              </div>
+            <div className="flex items-center">
+              <img 
+                src="/D copy 3 2.jpeg" 
+                alt="Danao Group Logo" 
+                className="h-11 w-11 object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.25)]"
+              />
             </div>
             <p className="text-gray-400 max-w-md">
               Premium multi-industry services across Australia, delivered with professional care and precision.
