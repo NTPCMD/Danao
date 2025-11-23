@@ -37,7 +37,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img 
                 src="/D copy 3 2.jpeg" 
                 alt="Danao Group Logo" 

@@ -19,7 +19,7 @@ export function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-[#D4AF37]/20"
     >
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 text-white hover:text-[#D4AF37] transition-colors duration-300">
+        <Link to="/" className="flex items-center text-white hover:text-[#D4AF37] transition-colors duration-300">
           <img 
             src="/D copy 3 2.jpeg" 
             alt="Danao Group Logo" 
