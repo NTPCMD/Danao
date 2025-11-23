@@ -7,3 +7,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# TypeScript build artifacts
+tsconfig.tsbuildinfo
+tsconfig.node.tsbuildinfo
+*.d.ts
+*.js
+!vite.config.ts
+!postcss.config.js
+!tailwind.config.ts
