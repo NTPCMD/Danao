@@ -43,10 +43,6 @@ export function Footer() {
                 alt="Danao Group Logo" 
                 className="h-11 w-11 object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.25)]"
               />
-              <div className="leading-tight">
-                <span className="block text-sm text-gray-300">The Danao Gold Standard</span>
-                <span className="block text-xl font-semibold">Danao Group</span>
-              </div>
             </div>
             <p className="text-gray-400 max-w-md">
               Premium multi-industry services across Australia, delivered with professional care and precision.
