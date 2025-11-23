@@ -65,10 +65,22 @@ export function Hero({ scrollY }: { scrollY: number }) {
           transform: `translateY(${scrollY * 0.3}px)`,
         }}
       >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0 }}
+          className="mb-8 flex justify-center"
+        >
+          <img 
+            src="/danao-logo.svg" 
+            alt="Danao Group Logo" 
+            className="w-32 h-32 md:w-40 md:h-40 drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+          />
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="uppercase tracking-[0.3em] text-sm text-[#D4AF37]/80 mb-4"
         >
           Luxury Multi-Industry Services
@@ -76,7 +88,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-6 text-white relative inline-block"
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
@@ -84,7 +96,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.9 }}
             className="h-1 bg-[#D4AF37] mt-4 origin-left"
           />
         </motion.h1>
@@ -92,7 +104,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto"
         >
           Premium Multi-Industry Services Across Australia.
@@ -101,7 +113,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
           className="flex flex-wrap gap-6 justify-center"
         >
           <Link
