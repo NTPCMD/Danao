@@ -20,11 +20,11 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 text-white hover:text-[#D4AF37] transition-colors duration-300">
-          <div className="h-11 w-11 rounded-full border border-[#D4AF37] flex items-center justify-center bg-black shadow-[0_0_20px_rgba(212,175,55,0.25)]">
-            <span className="text-lg font-semibold" style={{ fontFamily: 'Playfair Display, serif' }}>
-              DG
-            </span>
-          </div>
+          <img
+            src="/danao-logo.svg"
+            alt="Danao Group logo"
+            className="h-11 w-11 rounded-full bg-black border border-[#D4AF37] p-1 shadow-[0_0_20px_rgba(212,175,55,0.25)] object-contain"
+          />
           <div className="leading-tight">
             <span className="block text-sm text-gray-300">The Danao Gold Standard</span>
             <span className="block text-xl font-semibold">Danao Group</span>
