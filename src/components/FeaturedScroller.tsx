@@ -50,9 +50,9 @@ export function FeaturedScroller() {
             {duplicatedFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="group flex-shrink-0 px-12 py-6 bg-black border border-[#C9A961] whitespace-nowrap transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.5)]"
+                className="group flex-shrink-0 px-12 py-6 bg-black border border-[#D4AF37] whitespace-nowrap transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
               >
-                <span className="text-2xl text-white group-hover:text-[#C9A961] transition-colors duration-300" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <span className="text-2xl text-white group-hover:text-[#D4AF37] transition-colors duration-300" style={{ fontFamily: 'Playfair Display, serif' }}>
                   {feature}
                 </span>
               </div>

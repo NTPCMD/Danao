@@ -48,16 +48,16 @@ export function ContactPage() {
           className="relative z-10 text-center px-6 max-w-5xl"
         >
           <h1 className="text-5xl md:text-7xl mb-6 text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
-            Get in Touch
+            Contact Danao Group
           </h1>
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="h-1 bg-[#C9A961] mx-auto w-32 mb-6"
+            className="h-1 bg-[#D4AF37] mx-auto w-32 mb-6"
           />
           <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-            Ready to experience the Danao Gold Standard? Reach out to our team today.
+            Get in touch with our team to discuss your multi-industry service needs.
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export function ContactPage() {
             <h2 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Contact Information
             </h2>
-            <div className="h-1 w-24 bg-[#C9A961] mx-auto" />
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -87,10 +87,10 @@ export function ContactPage() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-[#0A0A0A] border border-gray-800 p-8 text-center hover:border-[#C9A961] transition-all duration-300 hover:shadow-[0_4px_30px_rgba(201,169,97,0.3)]"
+                  className="group bg-[#0A0A0A] border border-gray-800 p-8 text-center hover:border-[#D4AF37] transition-all duration-300 hover:shadow-[0_4px_30px_rgba(212,175,55,0.3)]"
                 >
                   <div className="mb-4 flex justify-center">
-                    <Icon className="w-12 h-12 text-[#C9A961] group-hover:scale-110 transition-transform duration-300" />
+                    <Icon className="w-12 h-12 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <h3 className="text-xl mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {info.title}
@@ -109,7 +109,7 @@ export function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-[#0A0A0A] border-2 border-[#C9A961] p-12 text-center max-w-4xl mx-auto"
+            className="bg-[#0A0A0A] border-2 border-[#D4AF37] p-12 text-center max-w-4xl mx-auto"
           >
             <h3 className="text-3xl md:text-4xl mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
               About Danao Group

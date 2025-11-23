@@ -20,108 +20,108 @@ const services = [
   {
     id: 'danao-website-building',
     title: 'Danao Website Building',
-    description: 'Luxury-grade websites and landing pages engineered for conversion and brand impact.',
+    description: 'Professional website development and digital solutions for businesses.',
     bullets: [
-      'Bespoke design systems and UI buildouts',
-      'Conversion-ready landing pages and funnels',
-      'Secure hosting, monitoring, and uptime care',
-      'Analytics, CRO, and performance optimisation',
+      'Business websites and landing pages',
+      'eCommerce platforms and online stores',
+      'Website maintenance and updates',
+      'Domain, hosting, and technical support',
     ],
     icon: Globe2,
   },
   {
     id: 'danao-digital-creative',
     title: 'Danao Digital & Creative',
-    description: 'Full creative studio support across brand, content, and campaigns.',
+    description: 'Creative design and branding services for your business identity.',
     bullets: [
-      'Brand identity refresh and stewardship',
-      'Campaign ideation, art direction, and rollout',
-      'Photo, video, and content production',
-      'Always-on social and performance creative',
+      'Branding and logo design',
+      'Social media content and graphics',
+      'Marketing collateral and campaigns',
+      'Photography and video production',
     ],
     icon: Palette,
   },
   {
     id: 'danao-logistics-transport',
     title: 'Danao Logistics & Transport',
-    description: 'Nationwide transport, freight, and white-glove deliveries under concierge oversight.',
+    description: 'Reliable transport and delivery coordination across Australia.',
     bullets: [
-      'Linehaul, freight, and last-mile coordination',
-      'White-glove setup and installation support',
-      'Warehousing, storage, and inventory control',
-      'Real-time updates and delivery assurance',
+      'Deliveries and courier services',
+      'Stock transfers and freight',
+      'Business transport coordination',
+      'Warehousing and storage solutions',
     ],
     icon: Truck,
   },
   {
     id: 'danao-property-facilities',
     title: 'Danao Property & Facilities',
-    description: 'Premium property care with trusted trades, maintenance, and preventative programs.',
+    description: 'Complete property maintenance and facility management services.',
     bullets: [
-      'Facility management and scheduled maintenance',
-      'Cleaning, presentation, and onsite readiness',
-      'Security coordination and access management',
-      'Capex planning with vetted trades and suppliers',
+      'Cleaning and maintenance services',
+      'Installations and basic repairs',
+      'Facility management coordination',
+      'Trade services and vendor coordination',
     ],
     icon: Building2,
   },
   {
     id: 'danao-business-support',
     title: 'Danao Business Support',
-    description: 'Executive-grade administration, project coordination, and PMO assistance.',
+    description: 'Administrative and operational support for your business.',
     bullets: [
-      'Executive assistance and diary stewardship',
-      'Project coordination and documentation',
-      'Vendor sourcing and procurement support',
-      'Reporting, dashboards, and compliance follow-up',
+      'Admin and virtual assistance',
+      'Back-office support services',
+      'Basic bookkeeping coordination',
+      'Project and document management',
     ],
     icon: BadgeCheck,
   },
   {
     id: 'danao-hospitality-services',
     title: 'Danao Hospitality Services',
-    description: 'End-to-end hospitality operations with impeccable guest experiences.',
+    description: 'Hospitality staffing and venue operations support.',
     bullets: [
-      'Venue setup, staffing, and service training',
-      'Guest journey mapping and service recovery',
-      'Menu launches, tastings, and supplier liaison',
-      'Onsite management for premium events',
+      'Staffing support and coordination',
+      'Venue assistance and setup',
+      'FOH and BOH operations',
+      'Service training and management',
     ],
     icon: UtensilsCrossed,
   },
   {
     id: 'danao-events-experiences',
     title: 'Danao Events & Experiences',
-    description: 'High-touch productions, launches, and corporate showcases with flawless delivery.',
+    description: 'Complete event coordination from setup to pack-down.',
     bullets: [
-      'Concept, creative, and experiential design',
-      'Venue sourcing, permits, and logistics',
-      'AV, staging, and production management',
-      'Onsite show-calling and guest services',
+      'Event setup and pack-down',
+      'Logistics and transport coordination',
+      'On-site management and support',
+      'Equipment and venue coordination',
     ],
     icon: PartyPopper,
   },
   {
     id: 'danao-concierge-services',
     title: 'Danao Concierge Services',
-    description: 'Personal and corporate concierge teams coordinating tasks across every division.',
+    description: 'Personal and business concierge coordination services.',
     bullets: [
-      'Lifestyle support, travel, and reservations',
-      'Corporate concierge desks and VIP care',
-      'Rapid request handling with vetted partners',
-      'White-glove handover and follow-up',
+      'General request handling',
+      'Coordinating across service lines',
+      'Personal assistance services',
+      'Business support coordination',
     ],
     icon: ConciergeBell,
   },
   {
     id: 'danao-store-setup-retail-ops',
     title: 'Danao Store Setup & Retail Ops',
-    description: 'Retail launches, visual merchandising, and operations managed end-to-end.',
+    description: 'Retail operations and store setup support services.',
     bullets: [
-      'Store design liaison and fit-out oversight',
-      'VM guides, planograms, and presentation',
-      'Staffing, rostering, and service training',
-      'Retail analytics, reporting, and optimisation',
+      'Shop setup and merchandising',
+      'Pop-up store coordination',
+      'Retail team support',
+      'Visual merchandising and displays',
     ],
     icon: ShoppingBag,
   },
@@ -149,8 +149,8 @@ export function ServicesPage() {
       <HeroCustom
         scrollY={scrollY}
         title="Our Services"
-        subtitle="Premium, multi-industry solutions coordinated through the Danao concierge desk."
-        button1Text="Book Consultation"
+        subtitle="Professional multi-industry services coordinated through Danao Group."
+        button1Text="Contact Us"
         button2Text="Explore Concierge"
         button1Href="/contact"
         button2Href="/concierge"
@@ -167,7 +167,7 @@ export function ServicesPage() {
             <h2 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Service Lines
             </h2>
-            <div className="h-1 w-24 bg-[#C9A961] mx-auto" />
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -180,11 +180,11 @@ export function ServicesPage() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.08 }}
-                  className="group relative bg-[#0A0A0A] border-2 border-[#C9A961] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_rgba(201,169,97,0.4)]"
+                  className="group relative bg-[#0A0A0A] border-2 border-[#D4AF37] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_rgba(212,175,55,0.4)]"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <Icon className="w-12 h-12 text-[#C9A961]" />
-                    <div className="h-px flex-1 bg-[#C9A961]/40" />
+                    <Icon className="w-12 h-12 text-[#D4AF37]" />
+                    <div className="h-px flex-1 bg-[#D4AF37]/40" />
                   </div>
                   <h3 className="text-2xl mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {service.title}
@@ -193,12 +193,12 @@ export function ServicesPage() {
                   <ul className="space-y-2 text-gray-300">
                     {service.bullets.map((item) => (
                       <li key={item} className="flex items-start gap-2">
-                        <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-[#C9A961]" />
+                        <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-[#D4AF37]" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="absolute inset-0 border-2 border-[#C9A961] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md" />
+                  <div className="absolute inset-0 border-2 border-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md" />
                 </motion.div>
               );
             })}

@@ -9,21 +9,21 @@ import { Link } from 'react-router-dom';
 
 const highlights = [
   {
-    title: 'Your Coordination Hub',
+    title: 'Coordination Hub',
     description:
-      'A single concierge desk that orchestrates website builds, logistics, property care, events, and hospitality without you having to chase suppliers.',
+      'A single point of contact that coordinates across all Danao service lines—from websites to logistics, property to events.',
     icon: Compass,
   },
   {
-    title: 'VIP & Executive Care',
+    title: 'Service Integration',
     description:
-      'Discreet white-glove support for leaders, guests, and high-value partners with proactive updates and follow-through.',
+      'Seamlessly connects you with the right specialists from our network to handle your specific needs.',
     icon: Sparkles,
   },
   {
-    title: 'Rapid Response Team',
+    title: 'Request Handling',
     description:
-      '24/7 request handling that mobilises the right Danao division instantly—from urgent deliveries to last-minute event needs.',
+      'Efficient management of requests across multiple service categories, ensuring quality and timely delivery.',
     icon: Headphones,
   },
 ];
@@ -79,13 +79,13 @@ export function ConciergePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/services"
-                className="px-8 py-4 bg-[#C9A961] text-black font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]"
+                className="px-8 py-4 bg-[#D4AF37] text-black font-semibold uppercase tracking-wide transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
               >
                 Explore All Services
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 border-2 border-[#C9A961] text-[#C9A961] font-semibold uppercase tracking-wide transition-all duration-300 hover:bg-[#C9A961] hover:text-black hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]"
+                className="px-8 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-semibold uppercase tracking-wide transition-all duration-300 hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
               >
                 Speak with Concierge
               </Link>
@@ -101,11 +101,11 @@ export function ConciergePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-[#0A0A0A] border-2 border-[#C9A961] p-6 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_rgba(201,169,97,0.4)]"
+                  className="group bg-[#0A0A0A] border-2 border-[#D4AF37] p-6 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_rgba(212,175,55,0.4)]"
                 >
                   <div className="mb-4 flex items-center gap-3">
-                    <Icon className="w-10 h-10 text-[#C9A961]" />
-                    <div className="h-px flex-1 bg-[#C9A961]/40" />
+                    <Icon className="w-10 h-10 text-[#D4AF37]" />
+                    <div className="h-px flex-1 bg-[#D4AF37]/40" />
                   </div>
                   <h3 className="text-xl mb-3" style={{ fontFamily: 'Playfair Display, serif' }}>
                     {item.title}

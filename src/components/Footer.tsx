@@ -26,7 +26,7 @@ export function Footer() {
         initial={{ scaleX: 0 }}
         animate={inView ? { scaleX: 1 } : {}}
         transition={{ duration: 1.5, ease: 'easeInOut' }}
-        className="absolute top-0 left-0 right-0 h-[2px] bg-[#C9A961] origin-left"
+        className="absolute top-0 left-0 right-0 h-[2px] bg-[#D4AF37] origin-left"
       />
 
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -38,7 +38,7 @@ export function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center gap-3">
-              <div className="h-11 w-11 rounded-full border border-[#C9A961] flex items-center justify-center bg-black shadow-[0_0_20px_rgba(201,169,97,0.25)]">
+              <div className="h-11 w-11 rounded-full border border-[#D4AF37] flex items-center justify-center bg-black shadow-[0_0_20px_rgba(212,175,55,0.25)]">
                 <span className="text-lg font-semibold" style={{ fontFamily: 'Playfair Display, serif' }}>
                   DG
                 </span>
@@ -49,7 +49,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-400 max-w-md">
-              Premium multi-industry services across Australia, delivered with concierge-level care and precision.
+              Premium multi-industry services across Australia, delivered with professional care and precision.
             </p>
           </motion.div>
 
@@ -58,7 +58,7 @@ export function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="mb-4 text-[#C9A961]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h3 className="mb-4 text-[#D4AF37]" style={{ fontFamily: 'Playfair Display, serif' }}>
               Services
             </h3>
             <ul className="space-y-2">
@@ -66,7 +66,7 @@ export function Footer() {
                 <li key={category.label}>
                   <Link
                     to={category.href}
-                    className="text-gray-400 hover:text-[#C9A961] transition-colors duration-300"
+                    className="text-gray-400 hover:text-[#D4AF37] transition-colors duration-300"
                   >
                     {category.label}
                   </Link>
@@ -80,21 +80,21 @@ export function Footer() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="mb-4 text-[#C9A961]" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h3 className="mb-4 text-[#D4AF37]" style={{ fontFamily: 'Playfair Display, serif' }}>
               Contact
             </h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="tel:1300000000" className="hover:text-[#C9A961] transition-colors duration-300">
+                <a href="tel:1300000000" className="hover:text-[#D4AF37] transition-colors duration-300">
                   1300 000 000
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:concierge@danaogroup.com"
-                  className="hover:text-[#C9A961] transition-colors duration-300"
+                  href="mailto:info@danaogroup.com"
+                  className="hover:text-[#D4AF37] transition-colors duration-300"
                 >
-                  concierge@danaogroup.com
+                  info@danaogroup.com
                 </a>
               </li>
               <li className="pt-2">
