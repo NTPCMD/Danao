@@ -29,12 +29,12 @@ export function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['concierge@danaogroup.com', 'Response within 24 hours'],
+      details: ['info@danaogroup.com', 'Response within 24 hours'],
     },
     {
       icon: Clock,
       title: 'Operating Hours',
-      details: ['24/7 Concierge Service', 'Business Hours: Mon-Fri 9am-6pm'],
+      details: ['Business Hours: Mon-Fri 9am-6pm', 'Australia Wide Coverage'],
     },
   ];
 
