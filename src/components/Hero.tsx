@@ -47,7 +47,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
         {particles.map((particle) => (
           <div
             key={particle.id}
-            className="absolute rounded-full bg-[#C9A961] opacity-30 blur-sm"
+            className="absolute rounded-full bg-[#D4AF37] opacity-30 blur-sm"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -69,7 +69,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="uppercase tracking-[0.3em] text-sm text-[#C9A961]/80 mb-4"
+          className="uppercase tracking-[0.3em] text-sm text-[#D4AF37]/80 mb-4"
         >
           Luxury Multi-Industry Services
         </motion.p>
@@ -85,7 +85,7 @@ export function Hero({ scrollY }: { scrollY: number }) {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="h-1 bg-[#C9A961] mt-4 origin-left"
+            className="h-1 bg-[#D4AF37] mt-4 origin-left"
           />
         </motion.h1>
 
@@ -106,14 +106,14 @@ export function Hero({ scrollY }: { scrollY: number }) {
         >
           <Link
             to="/services"
-            className="group relative px-10 py-4 bg-[#C9A961] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.6)] uppercase tracking-wide"
+            className="group relative px-10 py-4 bg-[#D4AF37] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] uppercase tracking-wide font-semibold"
           >
             <span className="relative z-10">Explore Services</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </Link>
           <Link
             to="/contact"
-            className="group relative px-10 py-4 bg-transparent border-2 border-[#C9A961] text-[#C9A961] overflow-hidden transition-all duration-300 hover:bg-[#C9A961] hover:text-black hover:shadow-[0_0_30px_rgba(201,169,97,0.6)] uppercase tracking-wide"
+            className="group relative px-10 py-4 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] overflow-hidden transition-all duration-300 hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] uppercase tracking-wide font-semibold"
           >
             <span className="relative z-10">Contact Us</span>
           </Link>

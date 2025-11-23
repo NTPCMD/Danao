@@ -58,7 +58,7 @@ export function HeroCustom({ scrollY, title, subtitle, button1Text, button2Text,
         {particles.map((particle) => (
           <div
             key={particle.id}
-            className="absolute rounded-full bg-[#C9A961] opacity-30 blur-sm"
+            className="absolute rounded-full bg-[#D4AF37] opacity-30 blur-sm"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -88,7 +88,7 @@ export function HeroCustom({ scrollY, title, subtitle, button1Text, button2Text,
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="h-1 bg-[#C9A961] mt-4 origin-left"
+            className="h-1 bg-[#D4AF37] mt-4 origin-left"
           />
         </motion.h1>
 
@@ -112,13 +112,13 @@ export function HeroCustom({ scrollY, title, subtitle, button1Text, button2Text,
               button1Href ? (
                 <Link
                   to={button1Href}
-                  className="group relative px-8 py-4 bg-[#C9A961] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]"
+                  className="group relative px-8 py-4 bg-[#D4AF37] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
                 >
                   <span className="relative z-10">{button1Text}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                 </Link>
               ) : (
-                <button className="group relative px-8 py-4 bg-[#C9A961] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]">
+                <button className="group relative px-8 py-4 bg-[#D4AF37] text-black overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]">
                   <span className="relative z-10">{button1Text}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                 </button>
@@ -128,12 +128,12 @@ export function HeroCustom({ scrollY, title, subtitle, button1Text, button2Text,
               button2Href ? (
                 <Link
                   to={button2Href}
-                  className="group relative px-8 py-4 bg-transparent border-2 border-[#C9A961] text-[#C9A961] overflow-hidden transition-all duration-300 hover:bg-[#C9A961] hover:text-black hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]"
+                  className="group relative px-8 py-4 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] overflow-hidden transition-all duration-300 hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]"
                 >
                   <span className="relative z-10">{button2Text}</span>
                 </Link>
               ) : (
-                <button className="group relative px-8 py-4 bg-transparent border-2 border-[#C9A961] text-[#C9A961] overflow-hidden transition-all duration-300 hover:bg-[#C9A961] hover:text-black hover:shadow-[0_0_30px_rgba(201,169,97,0.6)]">
+                <button className="group relative px-8 py-4 bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] overflow-hidden transition-all duration-300 hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_30px_rgba(212,175,55,0.6)]">
                   <span className="relative z-10">{button2Text}</span>
                 </button>
               )

@@ -14,7 +14,7 @@ export function AboutStrip() {
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className="absolute top-0 left-0 right-0 h-1 bg-[#C9A961] origin-left"
+          className="absolute top-0 left-0 right-0 h-1 bg-[#D4AF37] origin-left"
         />
 
         <motion.h2
@@ -31,18 +31,25 @@ export function AboutStrip() {
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl text-gray-300 leading-relaxed mb-6"
+        >
+          Danao Group is a multi-service organisation that coordinates and subcontracts through a premium network of specialist providers across Australia.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-xl text-gray-300 leading-relaxed"
         >
-          Danao Group delivers premium, concierge-led solutions across technology, logistics, property, hospitality, retail,
-          and experiences. Every engagement is coordinated through a single trusted team who obsesses over detail, timing,
-          and the Danao Gold Standard.
+          From digital and creative to logistics, property, hospitality, events, and retail—we bring together vetted professionals who deliver consistent quality under one trusted brand.
         </motion.p>
 
         <motion.div
           initial={{ scaleX: 0 }}
           animate={inView ? { scaleX: 1 } : {}}
-          transition={{ duration: 1, ease: 'easeInOut', delay: 0.6 }}
-          className="h-1 bg-[#C9A961] mt-8 origin-left"
+          transition={{ duration: 1, ease: 'easeInOut', delay: 0.8 }}
+          className="h-1 bg-[#D4AF37] mt-8 origin-left"
         />
       </div>
     </section>

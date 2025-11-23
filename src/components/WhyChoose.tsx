@@ -3,12 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import { Check } from 'lucide-react';
 
 const reasons = [
-  'Concierge-led coordination across every Danao division',
-  'Gold-standard black and gold brand experience',
-  'Nationwide partner network with premium vetting',
-  'Proactive reporting, timelines, and quality controls',
-  '24/7 response for priority clients and critical work',
-  'One trusted relationship manager for all services',
+  'Multi-industry coverage under one group',
+  'Vetted specialist partners across all services',
+  'Professional communication and coordination',
+  'Luxury-level presentation and service',
+  'Flexible, scalable support for businesses',
+  'Single point of contact for all needs',
 ];
 
 export function WhyChoose() {
@@ -39,8 +39,8 @@ export function WhyChoose() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex items-start gap-4 group"
             >
-              <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#C9A961] flex items-center justify-center transition-all duration-300 group-hover:bg-[#C9A961] group-hover:shadow-[0_0_20px_rgba(201,169,97,0.6)]">
-                <Check className="w-5 h-5 text-[#C9A961] group-hover:text-black transition-colors duration-300" />
+              <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-[#D4AF37] flex items-center justify-center transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]">
+                <Check className="w-5 h-5 text-[#D4AF37] group-hover:text-black transition-colors duration-300" />
               </div>
               <p className="text-xl text-gray-300 group-hover:text-white transition-colors duration-300">
                 {reason}
