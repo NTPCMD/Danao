@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danao Group | Concierge & Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --black-2: #111;
+      --gold: #d4af37;
+      --gold-light: #f0d67c;
+      --text: #ffffff;
+      --muted: #dcdcdc;
+      --glow: 0 10px 30px rgba(212, 175, 55, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    .page-transition {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(0,0,0,0.95), rgba(212,175,55,0.08), rgba(0,0,0,0.95));
+      transform: translateY(0);
+      transition: transform 0.8s ease;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .page-transition.loaded { transform: translateY(-100%); }
+
+    /* Layout helpers */
+    .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; }
+    section { padding: 96px 0; position: relative; overflow: hidden; }
+
+    /* Global animations */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-left { opacity: 0; transform: translateX(-24px); transition: opacity 1s ease, transform 1s ease; }
+    .fade-left.visible { opacity: 1; transform: translateX(0); }
+
+    /* Gold shimmer utility */
+    .gold-shimmer {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.2), transparent 40%),
+                  radial-gradient(circle at 80% 0%, rgba(212, 175, 55, 0.15), transparent 35%),
+                  linear-gradient(120deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0));
+      opacity: 0.75;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      animation: shimmer 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-4%) scale(1); opacity: 0.7; }
+      50% { transform: translateX(4%) scale(1.02); opacity: 1; }
+      100% { transform: translateX(-2%) scale(1.01); opacity: 0.8; }
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(180deg, #050505 0%, #0f0f0f 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.15), transparent 35%),
+                  radial-gradient(circle at 70% 10%, rgba(212, 175, 55, 0.18), transparent 35%);
+      animation: floatGlow 18s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translate3d(-2%, -2%, 0); }
+      50% { transform: translate3d(2%, 1%, 0); }
+      100% { transform: translate3d(-1%, 2%, 0); }
+    }
+
+    .gold-particles {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(1px 1px at 20% 30%, rgba(212, 175, 55, 0.8), transparent),
+                        radial-gradient(1px 1px at 40% 60%, rgba(212, 175, 55, 0.6), transparent),
+                        radial-gradient(1px 1px at 70% 20%, rgba(212, 175, 55, 0.9), transparent),
+                        radial-gradient(1px 1px at 90% 80%, rgba(212, 175, 55, 0.7), transparent);
+      animation: drift 18s linear infinite;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    @keyframes drift {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+      100% { transform: translateY(0); }
+    }
+
+    .hero-content { position: relative; z-index: 2; text-align: center; width: 100%; }
+    .hero-logo { position: absolute; top: 24px; left: 24px; width: 120px; height: auto; filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45)); }
+    .hero h1 { font-size: clamp(40px, 6vw, 72px); letter-spacing: 0.6px; margin-bottom: 18px; }
+    .hero h2 { font-size: clamp(18px, 2vw, 24px); font-weight: 400; color: var(--muted); margin-bottom: 36px; }
+
+    .underline { display: inline-block; position: relative; padding-bottom: 8px; }
+    .underline::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0), var(--gold), rgba(212, 175, 55, 0));
+      transform: translateX(-50%);
+      transition: width 1s ease;
+    }
+    .underline.active::after { width: 120%; }
+
+    .btn-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 28px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0));
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .btn:hover::before { transform: translateX(0); }
+    .btn:hover { box-shadow: var(--glow); transform: translateY(-4px); background: rgba(212, 175, 55, 0.07); }
+
+    /* Grid sections */
+    .section-title { text-align: center; margin-bottom: 48px; font-size: 32px; letter-spacing: 0.4px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+
+    .card {
+      background: linear-gradient(160deg, rgba(30,30,30,0.9), rgba(12,12,12,0.95));
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 24px;
+      min-height: 180px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1), transparent 40%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .card:hover { transform: translateY(-8px); box-shadow: var(--glow); border-color: var(--gold); }
+    .card:hover::after { opacity: 1; }
+
+    .card h3 { font-size: 20px; margin-bottom: 10px; }
+    .card p { color: var(--muted); line-height: 1.55; font-size: 14px; }
+
+    /* About strip */
+    .about-strip {
+      background: linear-gradient(90deg, rgba(15,15,15,0.95), rgba(10,10,10,0.98));
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      position: relative;
+    }
+
+    .border-reveal {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0), rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0));
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 1s ease;
+    }
+
+    .border-reveal.active { transform: scaleY(1); }
+    .about-text { max-width: 780px; margin-left: auto; margin-right: auto; text-align: center; }
+    .about-text p { margin-top: 16px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+
+    /* Featured scroller */
+    .scroller {
+      display: flex;
+      gap: 16px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-track {
+      display: flex;
+      gap: 16px;
+      animation: marquee 22s linear infinite;
+    }
+
+    .scroller:hover .scroll-track { animation-play-state: paused; }
+
+    .pill {
+      padding: 16px 22px;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 999px;
+      background: rgba(20,20,20,0.9);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+      transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .pill:hover { box-shadow: var(--glow); border-color: var(--gold); transform: translateY(-4px); }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Why choose list */
+    .why-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .why-list li { background: rgba(18,18,18,0.95); border: 1px solid rgba(212, 175, 55, 0.25); padding: 16px 18px; border-radius: 8px; }
+
+    /* CTA */
+    .cta { position: relative; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.35); border-radius: 12px; background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(8,8,8,0.98)); padding: 48px 36px; text-align: center; }
+    .cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .cta .btn { border-radius: 8px; }
+
+    /* Footer */
+    footer { padding: 48px 0; border-top: 1px solid rgba(212, 175, 55, 0.35); position: relative; overflow: hidden; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; align-items: start; }
+    .footer-logo { width: 120px; height: auto; }
+    .footer-title { font-size: 16px; letter-spacing: 0.5px; margin-bottom: 12px; }
+    .footer-links { display: grid; gap: 6px; color: var(--muted); }
+    .footer-line { position: absolute; left: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, rgba(212, 175, 55, 0), var(--gold), rgba(212, 175, 55, 0)); width: 0; transition: width 1.2s ease; }
+    .footer-line.active { width: 100%; }
+
+    /* Responsive tweaks */
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 36px; }
+      .hero h2 { font-size: 18px; }
+      .btn-row { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-transition"></div>
+  <header class="hero" id="top">
+    <img class="hero-logo" src="[[INSERT LOGO URL HERE]]" alt="Danao Group Logo" />
+    <div class="gold-particles" aria-hidden="true"></div>
+    <div class="wrapper hero-content fade-in">
+      <h1 class="underline">Danao Concierge Services</h1>
+      <h2>Premium personal and business concierge solutions delivered with the Danao Gold Standard.</h2>
+      <div class="btn-row">
+        <a class="btn" href="#concierge">Explore Concierge</a>
+        <a class="btn" href="#contact">Get Assistance</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="concierge">
+    <div class="wrapper">
+      <h2 class="section-title underline fade-in">Our Concierge Services</h2>
+      <div class="grid">
+        <div class="card fade-in" style="transition-delay:0.05s"><h3>Personal Concierge</h3><p>Discreet lifestyle management for travel, reservations, and tailored personal tasks.</p></div>
+        <div class="card fade-in" style="transition-delay:0.1s"><h3>Business Concierge</h3><p>Executive-level support coordinating operations, admin, and on-demand professional tasks.</p></div>
+        <div class="card fade-in" style="transition-delay:0.15s"><h3>Event Concierge</h3><p>End-to-end planning, vendor liaison, and luxury guest experiences managed for you.</p></div>
+        <div class="card fade-in" style="transition-delay:0.2s"><h3>Logistics Concierge</h3><p>Time-critical logistics, courier coordination, and streamlined movement across cities.</p></div>
+        <div class="card fade-in" style="transition-delay:0.25s"><h3>Digital Concierge</h3><p>On-demand digital support for web, creative, and tech troubleshooting.</p></div>
+        <div class="card fade-in" style="transition-delay:0.3s"><h3>Premium Support Concierge</h3><p>Priority access to the Danao network with proactive follow-through and reporting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-strip" id="about">
+    <div class="border-reveal"></div>
+    <div class="gold-shimmer" aria-hidden="true"></div>
+    <div class="wrapper">
+      <div class="about-text fade-left">
+        <h2 class="section-title" style="text-align:left">About Danao Group</h2>
+        <p>Danao Group provides premium concierge and multi-industry services across Australia. Our network of vetted specialists enables seamless delivery, coordinated through a single trusted point of contact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="additional">
+    <div class="wrapper">
+      <h2 class="section-title underline fade-in">Additional Services We Provide</h2>
+      <div class="grid">
+        <div class="card fade-in" style="transition-delay:0.05s"><h3>Digital &amp; Creative</h3><p>Brand, web, and content creation delivered with concierge precision.</p></div>
+        <div class="card fade-in" style="transition-delay:0.1s"><h3>Logistics &amp; Transport</h3><p>Coordinated transport, courier, and distribution solutions.</p></div>
+        <div class="card fade-in" style="transition-delay:0.15s"><h3>Property &amp; Facilities</h3><p>Maintenance, cleaning, and facilities management through trusted partners.</p></div>
+        <div class="card fade-in" style="transition-delay:0.2s"><h3>Business &amp; Corporate</h3><p>Corporate support, staffing, and administrative services.</p></div>
+        <div class="card fade-in" style="transition-delay:0.25s"><h3>Hospitality &amp; Retail</h3><p>Trained personnel and operational support for hospitality and retail venues.</p></div>
+        <div class="card fade-in" style="transition-delay:0.3s"><h3>Events &amp; Experiences</h3><p>Production, styling, and guest services with gold-standard delivery.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured">
+    <div class="wrapper">
+      <h2 class="section-title underline fade-in">Featured Service Scroller</h2>
+      <div class="scroller fade-in">
+        <div class="scroll-track">
+          <div class="pill">Website Development</div>
+          <div class="pill">Event Setup</div>
+          <div class="pill">Retail Staffing</div>
+          <div class="pill">Corporate Logistics</div>
+          <div class="pill">Property Maintenance</div>
+          <div class="pill">Brand &amp; Creative Solutions</div>
+          <!-- duplicate for seamless loop -->
+          <div class="pill">Website Development</div>
+          <div class="pill">Event Setup</div>
+          <div class="pill">Retail Staffing</div>
+          <div class="pill">Corporate Logistics</div>
+          <div class="pill">Property Maintenance</div>
+          <div class="pill">Brand &amp; Creative Solutions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrapper">
+      <h2 class="section-title underline fade-in">Why Choose Danao</h2>
+      <ul class="why-list">
+        <li class="fade-in" style="transition-delay:0.05s">Premium concierge-first service model</li>
+        <li class="fade-in" style="transition-delay:0.1s">One point of contact</li>
+        <li class="fade-in" style="transition-delay:0.15s">Vetted network of specialists</li>
+        <li class="fade-in" style="transition-delay:0.2s">Priority response times</li>
+        <li class="fade-in" style="transition-delay:0.25s">Professional coordination</li>
+        <li class="fade-in" style="transition-delay:0.3s">The Danao Gold Standard</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrapper">
+      <div class="cta fade-in">
+        <div class="gold-shimmer" aria-hidden="true"></div>
+        <h2 style="font-size:28px; margin-bottom:8px;" class="underline">Need Assistance?</h2>
+        <p style="color:var(--muted)">Our concierge team responds quickly to help with any task or request.</p>
+        <div class="cta-buttons">
+          <a class="btn" href="tel:+61-000-000-000">Call</a>
+          <a class="btn" href="mailto:concierge@danao.com">Email</a>
+          <a class="btn" href="#top">Submit Request</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrapper footer-grid fade-in">
+      <div>
+        <img class="footer-logo" src="[[INSERT LOGO URL HERE]]" alt="Danao Group Logo" />
+        <p style="color:var(--muted); margin-top:10px;">Concierge and multi-industry services with the Danao Gold Standard.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Service Categories</h4>
+        <div class="footer-links">
+          <span>Concierge (Personal, Business, Event)</span>
+          <span>Digital &amp; Creative</span>
+          <span>Logistics &amp; Transport</span>
+          <span>Property &amp; Facilities</span>
+          <span>Hospitality &amp; Retail</span>
+          <span>Events &amp; Experiences</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-title">Contact</h4>
+        <div class="footer-links">
+          <span>Phone: +61 000 000 000</span>
+          <span>Email: concierge@danao.com</span>
+          <span>Head Office: Sydney, Australia</span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper" style="margin-top:16px; color:var(--muted);">© Danao Group</div>
+    <div class="footer-line"></div>
+  </footer>
+
+  <script>
+    // Smooth page transitions
+    const transition = document.querySelector('.page-transition');
+    if (transition) {
+      requestAnimationFrame(() => transition.classList.add('loaded'));
+      window.addEventListener('beforeunload', () => transition.classList.remove('loaded'));
+    }
+
+    // Fade-in observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const underline = entry.target.classList.contains('underline') ? entry.target : entry.target.querySelector('.underline');
+          if (underline) underline.classList.add('active');
+          const border = entry.target.querySelector?.('.border-reveal');
+          if (border) border.classList.add('active');
+          if (entry.target.classList.contains('footer-grid')) {
+            document.querySelector('.footer-line')?.classList.add('active');
+          }
+        }
+      });
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll('.fade-in, .fade-left, .underline, .footer-grid').forEach(el => observer.observe(el));
+
+    // Parallax hero background
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      const y = window.scrollY * 0.35;
+      hero.style.backgroundPosition = `center ${y}px`;
+    });
+
+    // Velo-compatible helper (wrap in $w.onReady when using in Wix)
+    window.danaoVelo = {
+      onReady($w) {
+        // Attach scroll animations to Wix elements with matching class names
+        const wixObserver = (elements) => {
+          elements.forEach((item, idx) => {
+            if (!item || !item.onViewportEnter) return;
+            item.onViewportEnter(() => {
+              item.style.opacity = 1;
+              item.style.transform = 'translateY(0px)';
+            });
+            if (item.style) {
+              item.style.opacity = 0;
+              item.style.transform = 'translateY(24px)';
+              item.style.transition = `opacity 0.9s ease ${(idx*80)/1000}s, transform 0.9s ease ${(idx*80)/1000}s`;
+            }
+          });
+        };
+        wixObserver([$w('#heroSection'), $w('#conciergeSection'), $w('#aboutSection')]);
+      }
+    };
+  </script>
+</body>
+</html>
